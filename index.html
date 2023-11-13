@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo & DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="root">
+
+
+    </div>
+
+    <script>
+
+        let MonTableauMedium2 = [
+            {
+                ProductName: 'Fchkel',
+                ProuctDesc: 'Tshirt fchkel',
+                imgaeUrl: 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/195234/05/sv01/fnd/DFA/fmt/png/Chaussures-de-running-Softride-Enzo-NXT-Homme',
+                Colors: [
+                    'red', 'blue', 'white'
+                ]
+            },
+
+            {
+                ProductName: 'Fchkel 2',
+                ProuctDesc: 'sberdila fchkel',
+                imgaeUrl: 'data:image/jpeg;base64,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',
+                Colors: [
+                    'red', 'pink', 'purple'
+                ]
+            },
+
+            {
+                ProductName: 'Fchkel 3',
+                ProuctDesc: 'sberdila fchkel',
+                imgaeUrl: 'data:image/jpeg;base64,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',
+                Colors: [
+                    'red', 'pink', 'purple'
+                ]
+            },
+        ]
+
+        let MonStore = document.getElementById('root')
+
+        MonTableauMedium2.forEach((item, index) => {
+            let MaCarteProduit = document.createElement('div')
+            MaCarteProduit.setAttribute('class', 'MaCarteProduit')
+            // MaCarteProduit.setAttribute('id', 'MaCarteProduit' + index)
+
+            let SmiyaDyalProduitDyali = document.createElement('h2')
+            SmiyaDyalProduitDyali.innerHTML = item.ProductName
+
+            let MonImagedeproduit = document.createElement('img')
+            MonImagedeproduit.setAttribute('src', item.imgaeUrl)
+
+            let listcolors = document.createElement("ul")
+            item.Colors.forEach((col) => {
+                let couleur = document.createElement("li")
+                couleur.innerHTML = col
+                couleur.style.color = col
+                listcolors.appendChild(couleur)
+            })
+
+
+            let DescDyalProduitDyali = document.createElement('h3')
+
+            DescDyalProduitDyali.innerHTML = item.ProuctDesc
+
+
+            MaCarteProduit.appendChild(SmiyaDyalProduitDyali)
+            MaCarteProduit.appendChild(MonImagedeproduit)
+            MaCarteProduit.appendChild(DescDyalProduitDyali)
+            MaCarteProduit.appendChild(listcolors)
+
+            MonStore.appendChild(MaCarteProduit)
+
+
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
